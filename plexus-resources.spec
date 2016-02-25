@@ -38,7 +38,7 @@
 
 Name:           %{?scl_prefix}%{pkg_name}
 Version:        1.0
-Release:        0.15.a7.13%{?dist}
+Release:        0.15.a7.14%{?dist}
 Summary:        Plexus Resource Manager
 License:        MIT
 URL:            http://plexus.codehaus.org/
@@ -48,7 +48,7 @@ Source0:        %{pkg_name}-%{version}-alpha-7-src.tar.xz
 
 BuildRequires:  %{?scl_prefix_java_common}javapackages-tools
 BuildRequires:  %{?scl_prefix_java_common}ant >= 0:1.6
-BuildRequires:  %{?scl_prefix_java_common}maven-local
+BuildRequires:  %{?scl_prefix}maven-local
 BuildRequires:  %{?scl_prefix}maven-compiler-plugin
 BuildRequires:  %{?scl_prefix}maven-install-plugin
 BuildRequires:  %{?scl_prefix}maven-jar-plugin
@@ -99,6 +99,9 @@ set -e -x
 %files javadoc -f .mfiles-javadoc
 
 %changelog
+* Mon Feb 08 2016 Michal Srb <msrb@redhat.com> - 1.0-0.15.a7.14
+- Fix BR on maven-local & co.
+
 * Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 1.0-0.15.a7.13
 - maven33 rebuild #2
 
